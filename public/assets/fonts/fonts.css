@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'futura';
+    src: url('FUTURA55REGULAR.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'tiempos';
+    src: url('TiemposText-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+    @font-face {
+        font-family: 'tiempos';
+        src: url('TiemposText-Italic.ttf') format('truetype');
+        font-style: italic;
+    }
+
+@font-face {
+    font-family: 'futura';
+    src: url('Futura\ Bold\ font.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'futura';
+    src: url('Futura\ Italic\ font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'futura';
+    src: url('Futura\ Bold\ Italic\ font.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'futura-light';
+    src: url('Futura\ Light\ font.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'playfair';
+    src: url('PlayfairDisplay-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'playfair';
+    src: url('PlayfairDisplay-Italic.ttf') format('truetype');
+    font-style: italic;
+}

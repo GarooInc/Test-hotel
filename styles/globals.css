@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none;
+}
+
+.icon_page {
+  @apply md:w-40 md:h-40 w-32 h-32;
+}
+
+.items_container{
+  @apply flex gap-4 justify-center items-center whitespace-nowrap pr-10 pl-40;
+}
+
+.page{
+  @apply flex min-h-screen flex-col items-center;
+}
+
+.filters{
+  @apply h-6 px-2 py-1 bg-white rounded-md shadow justify-start items-center gap-1 inline-flex;
+}
+
+.text_filter{
+  @apply text-center text-black text-xs font-light font-futura leading-none;
+}
+
+.principal_title{
+  @apply md:text-6xl text-4xl text-center text-secondary font-playfair;
+}
+
+.italictiempos_title{
+  @apply text-center text-4xl font-playfair italic py-4;
+}
+
+.tiempos_description{
+  @apply font-tiempos leading-none flex gap-2 font-medium text-lg;
+}
+
+.futura_description{
+  @apply font-futura leading-6 flex gap-2 font-medium text-lg;
+}
+
+/* activities */
+
+.icon_activities{
+  @apply text-tertiary text-lg;
+}
+
+.description_activities{
+  @apply text-black text-xs font-futura;
+}
+
+.separator {
+  @apply border-l md:border-b md:border-l-0 border-quaternary px-2 py-2 h-full mt-2 text-sm font-futura flex justify-center items-center;
+}
+
+.activities_container{
+  @apply grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 grid-flow-row-dense auto-rows-auto px-10 pt-10 pb-20 w-full md:gap-0;
+}
+
+.activities_inner_container{
+  @apply flex items-center leading-none gap-2 w-full;
+}
+
+.activities_inner_text{
+  @apply text-black text-sm font-futura font-medium tracking-tight w-3/5;
+}
+
+.experiences ul {
+  list-style: inside;
+  padding-left: 10px;
+}
+
+.experiences ul li {
+  margin-bottom: 1rem;
+}
+
+.experiences a{
+  @apply underline text-tertiary;
+}
+
+.green_button{
+  @apply bg-tertiary text-white  px-6 py-2 mt-2 text-sm font-futura;
+}
+
+.input_cart, .react-tel-input .form-control{
+  @apply bg-secondary font-futura text-black px-2;
+}
+
+.input_cart, .react-tel-input .form-control{
+  width: 100% !important;
+  border-radius: 0px !important;
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+  margin : 0px !important;
+}
+
+.background {
+  background-image: url('/assets/images/patron.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.infodisplay a {
+  @apply underline text-tertiary;
+}
+
+.infodisplay strong {
+  @apply text-tertiary;
+}
+
+/* welcome */
+.welcome_container{
+  @apply flex flex-col justify-center items-center w-full h-full bg-quaternary p-10 md:p-14;
+}
+
+.welcome_container{
+  background-image: url('/assets/images/welcome/background.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.welcome_container p{
+  @apply text-center md:text-lg text-sm  text-secondary font-futura tracking-widest;
+}
+
+/* button nav */
+.button_nav_container{
+  @apply md:w-96 h-16 cursor-pointer w-full;
+}
+
+.button_nav{
+  @apply p-4 flex font-futura  border-t-2 h-full border-quaternary text-quaternary;
+}
+
+.button_nav_icon{
+  @apply inline-block text-xl text-tertiary;
+}
+
+/* adventure */
+.adventure_container{
+  @apply grid grid-cols-1 gap-4 md:gap-0 xl:grid-cols-5 grid-flow-row-dense auto-rows-auto md:px-10 w-full;
+}
+
+.adventure_img{
+  @apply md:w-full w-full h-48 md:h-52 object-cover;
+}
+
+.adventure_title{
+  @apply text-primary md:text-xl text-lg tracking-widest leading-tight font-futura mt-2 uppercase;
+}
+
+.button_line{
+    @apply text-tertiary tracking-widest uppercase border-b-2 border-tertiary px-4 py-2 mt-2 text-sm font-futura flex justify-center items-center;
+}
+
+
+/* emergency hk fd */
+.info_container{
+  @apply w-full pt-4 pb-20 md:pb-20 md:pt-10 flex flex-col justify-center items-center relative;
+}
+
+/* cart item */
+.cart_container{
+  @apply bg-secondary w-80 md:w-[450px] md:p-10 pt-10 px-4 h-screen;
+}
+
+.cart_items{
+  @apply py-16 flex flex-col overflow-y-scroll h-[90%];
+}
+
+.remove_button{
+  @apply justify-start items-center text-xs inline-flex font-futura bg-transparent text-black px-2 py-1 absolute right-2 border border-black;
+}
+
+.cart_image{
+  @apply md:w-40 w-32 h-40 object-cover;
+}
+
+.quantity_button{
+  @apply flex justify-between items-center shadow-xl w-full border border-black;
+}
+
+.quantity_button_inner{
+  @apply  shadow justify-start items-center text-xs inline-flex font-futura  text-primary px-2 py-1;
+}
+
+.quantity_text{
+  @apply text-black text-xs font-futura leading-none px-4;
+}
+
+.item_title{
+  @apply text-black md:text-base text-xs leading-tight font-futura mt-8 w-full gap-4 flex flex-col;
+}
+
+.checkout_button{
+  @apply text-tertiary fixed bottom-4 right-4 font-futura flex gap-2 justify-center items-center;
+}
+
+.close_button {
+  @apply fixed top-8 left-4 p-4;
+}
+
+/* checkout */
+.checkout_form{
+  @apply fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center;
+}
+
+.form_container{
+  @apply flex flex-col gap-4 mt-4;
+}
+
+.msg_container{
+  @apply fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center;
+}
+
+.cst_message{
+  @apply bg-white rounded-lg p-6 w-80 flex flex-col justify-center items-center relative;
+}
+
+.close_btn {
+  @apply text-black text-2xl absolute top-2 right-2;
+}
+
+/* cart */
+.cart_bubble{
+  @apply absolute top-0 right-0 bg-tertiary text-white rounded-full w-4 h-4 flex items-center justify-center text-xs;
+}
+
+/* front desk */
+.fontdesk_item{
+  @apply flex items-center flex-col gap-2;
+}
+
+.fontdesk_item_text{
+  @apply md:text-lg text-primary flex flex-col items-center text-center justify-center;
+}
+
+/* food and drinks */
+
+.food_container{
+  @apply flex flex-col w-full;
+}
+
+.food_drinks_inner{
+  @apply flex flex-col w-full;
+}
+
+.food_drinks_img{
+  @apply w-full h-96 object-cover relative;
+}
+
+.food_drinks_info {
+  @apply flex flex-col p-10  bg-tertiary gap-4;
+}
+
+.food_drinks_title{
+  @apply md:text-4xl text-2xl leading-tight font-futura mt-2 text-secondary;
+}
+
+.food_drinks_description_container{
+  @apply flex flex-col gap-4 border-b border-secondary py-2;
+}
+
+.food_drinks_description{
+  @apply text-secondary md:text-lg text-sm font-futura leading-6 text-justify;
+}
+
+.food_drinks_icons_container{
+  @apply flex flex-col gap-2 justify-end items-start;
+}
+
+.food_drinks_text{
+  @apply text-secondary md:text-lg text-sm font-futura leading-none flex gap-2 font-medium;
+}
+
+.menu_btn{
+  @apply bg-quaternary text-secondary rounded-none px-8 py-2 mt-2 text-sm font-futura;
+}
+
+/* phone item */
+.phone_text{
+  @apply md:text-sm text-xs text-primary font-futura;
+}
+
+/* flip book */
+
+.react-pdf__Page, .stf__parent canvas{
+  height: 100% !important;
+}
+
+
+/* menu */
+.menu_container{
+  @apply flex flex-col gap-10 pt-10 pb-20 md:px-10 px-8 w-full;
+}
+.menu_items_container{
+  @apply flex gap-4 justify-center items-center whitespace-nowrap px-10;
+}
+
+.menu_grid{
+  @apply grid grid-cols-1 gap-4 md:grid-cols-4 grid-flow-row-dense auto-rows-auto pb-12;
+}
+
+.menu_items_container button:first-child {
+  margin-left: 200px;
+}

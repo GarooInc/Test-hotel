@@ -1,0 +1,35 @@
+{
+  "name": "kaana",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "i18nexus pull && next dev",
+    "build": "i18nexus pull && next build",
+    "start": "i18nexus pull && next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "framer-motion": "^11.11.9",
+    "i18next": "^23.12.1",
+    "i18next-resources-to-backend": "^1.2.1",
+    "next": "^14.2.15",
+    "next-i18n-router": "^5.5.1",
+    "npm-force-resolutions": "^0.0.10",
+    "pocketbase": "^0.21.3",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-i18next": "^14.1.2",
+    "react-icons": "^5.2.1",
+    "react-pageflip": "^2.0.3",
+    "react-pdf": "^9.1.1",
+    "react-phone-input-2": "^2.15.1"
+  },
+  "devDependencies": {
+    "daisyui": "^4.12.10",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "i18nexus-cli": "^3.4.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1"
+  }
+}
