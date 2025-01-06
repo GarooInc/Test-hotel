@@ -18,7 +18,6 @@ export default async function RoomService({ params: { locale }}) {
             <HeaderItem v={"v4"} />
             <Menu />
             <FooterCart />
-            <FooterItem transparent logo={"v11"} />
         </main>
         </TranslationsProvider>
     );

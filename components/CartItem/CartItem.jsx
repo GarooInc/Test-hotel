@@ -1,7 +1,6 @@
 "use client"
 import React, { useState, useEffect, useRef } from 'react'
 import { useCart } from '@/contexts/CartContext'
-import { useRouter } from "next/navigation"
 import { CgArrowLongRight, CgShoppingCart } from 'react-icons/cg'
 import { TfiClose } from "react-icons/tfi"
 import { motion } from "framer-motion"
@@ -11,9 +10,7 @@ import 'react-phone-input-2/lib/style.css'
 
 const CartItem = ({ showCart }) => {
     const { state, dispatch } = useCart()
-    const router = useRouter()
     const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL
-    const ordersUrl = process.env.NEXT_PUBLIC_API_URL
 
     const [showForm, setShowForm] = useState(false)
     const [isOpen, setIsOpen] = useState(true)
@@ -43,26 +40,10 @@ const CartItem = ({ showCart }) => {
             "quantity": item.quantity
         }))
         
-        const response = await fetch(`${ordersUrl}/api/v1/orders`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                contact: form.phone,
-                family: form.family,
-                room: parseInt(form.room, 10),
-                items: items
-            })
-        })
-
-        if (response.ok) {
-            setMessage('Order created successfully')
-            dispatch({ type: 'LOAD_ITEMS', payload: [] })
-            setShowForm(false)
-        } else {
-            setMessage('Error creating order')
-        }
+        console.log(items)
+        setMessage('Order created successfully')
+        dispatch({ type: 'LOAD_ITEMS', payload: [] })
+        setShowForm(false)
     }
 
     const onHandleClose = () => {
@@ -76,6 +57,7 @@ const CartItem = ({ showCart }) => {
     }
 
     const handleCheckout = () => {
+        console.log('checkout')
         setShowForm(true)
     }
 
@@ -157,12 +139,12 @@ const CartItem = ({ showCart }) => {
                 <p className='text-center font-futura'>Your cart is empty</p>
             )}
             {state.items.length > 0 && (
-                <button className="checkout_button" onClick={handleCheckout}>Checkout <CgArrowLongRight className="text-light-brown text-2xl" /></button>
+                <button className="checkout_button z-40" onClick={handleCheckout}>Checkout <CgArrowLongRight className="text-light-brown text-2xl" /></button>
             )}
         </motion.div>
             {showForm && (
                 <div className="checkout_form">
-                    <motion.div className="bg-tertiary p-6 w-80" animate={showForm ? "formOpen" : "formClosed"} variants={variants} initial="formClosed">
+                    <motion.div className="bg-tertiary p-6 w-80"  initial="formClosed">
                         <div className="flex justify-end">
                             <button onClick={() => setShowForm(false)}><TfiClose className="text-black text-2xl" /></button>
                         </div>
